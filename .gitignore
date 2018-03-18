@@ -1,0 +1,6 @@
+files/
+data/
+node_modules/
+.sass-cache
+.sass-cache/*
+package-lock.json
