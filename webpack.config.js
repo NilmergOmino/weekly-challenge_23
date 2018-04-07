@@ -48,16 +48,28 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     // minify css at the end
-                    use: [{loader: 'css-loader', options: {minimize: false}}, 'sass-loader', 'postcss-loader']
+                    use: [{loader: 'css-loader', options: {minimize: false}}, 'postcss-loader', 'sass-loader']
                 })
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: '../assets/'
+                        }
+                    }
+                ]
             }
         ]
     },
 
     plugins: [
-        new UglifyJsPlugin({
-            sourceMap: true
-        }),
+        // new UglifyJsPlugin({
+        //     sourceMap: true
+        // }),
         new ExtractTextPlugin({
             filename: '../css/style.css'
         })

@@ -1,0 +1,14 @@
+._text{
+    &-caps{
+        text-transform: uppercase;
+    }
+    &-bold{
+        font-weight: 700;
+    }
+    &-right{
+        text-align: right;
+    }
+    &-center{
+        text-align: center;
+    }
+}

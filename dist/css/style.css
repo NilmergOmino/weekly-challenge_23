@@ -107,7 +107,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -401,5 +402,110 @@ template {
      */
 [hidden] {
   display: none; }
+
+html {
+  font-size: 12px; }
+  @media only screen and (min-width: 768px) {
+    html {
+      font-size: 14px; } }
+  @media only screen and (min-width: 1024px) {
+    html {
+      font-size: 16px; } }
+  @media only screen and (min-width: 1800px) {
+    html {
+      font-size: 18px; } }
+  @media only screen and (min-width: 2200px) {
+    html {
+      font-size: 20px; } }
+  @media only screen and (min-width: 2600px) {
+    html {
+      font-size: 22px; } }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  margin: 0.8em 0; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.25rem; }
+
+h3 {
+  font-size: 1.75rem; }
+
+h4 {
+  font-size: 1.125rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.8rem; }
+
+p {
+  line-height: 1.5em; }
+
+button, input, optgroup, select, textarea {
+  font-family: "Roboto", sans-serif; }
+
+nav, main, aside, article, section, footer, header, figure, div {
+  box-sizing: border-box; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+._text-caps {
+  text-transform: uppercase; }
+
+._text-bold {
+  font-weight: 700; }
+
+._text-right {
+  text-align: right; }
+
+._text-center {
+  text-align: center; }
+
+._state-hidden {
+  display: none; }
+
+._list-box {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+._button {
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid inherit;
+  cursor: pointer;
+  padding: 0.7em 1.5em; }
 
 /*# sourceMappingURL=style.css.map*/
