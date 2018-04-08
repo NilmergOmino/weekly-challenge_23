@@ -1,14 +1,17 @@
-._text{
-    &-caps{
+._text {
+    &-caps {
         text-transform: uppercase;
     }
-    &-bold{
+    &-bold {
         font-weight: 700;
     }
-    &-right{
+    &-right {
         text-align: right;
     }
-    &-center{
+    &-center {
         text-align: center;
+    }
+    &-blue {
+        color: $colorAzureRadiance;
     }
 }

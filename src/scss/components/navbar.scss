@@ -1,0 +1,39 @@
+.navbar {
+    @include flex(column,nowrap,space-around,center,center);
+    overflow: hidden;
+    color: white;
+    background-color: black;
+    &_logo {
+        margin: .5em 0;
+        font-size: 2em;
+    }
+    &_trigger {
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 20px;
+        right: 25px;
+    }
+    &_menu {
+        margin: .5em 0;
+    }
+    @include screen(desktop) {
+        @include flex(row,nowrap,space-between,stretch,center);
+        background-color: transparent;
+        &_logo {
+            margin: 1em 0;
+            transition: $timeFast;
+        }
+        &_trigger {
+            display: none;
+        }
+        &.-sticky {
+            background-color: rgba(black, 0.9);
+        }
+        &.-sticky .navbar{
+            &_logo {
+                margin: 0.5em 0;
+            }
+        }
+    }
+}

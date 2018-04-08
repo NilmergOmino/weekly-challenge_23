@@ -1,0 +1,42 @@
+.trigger {
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 0;
+    &_line {
+        position: absolute;
+        height: 20%;
+        width: 100%;
+        background-color: rgba($colorAzureRadiance, 0.6);
+        left: 0;
+        transition: 0.3s;
+    }
+    &_line.-first {
+        top: 0;
+    }
+    &_line.-second {
+        top: 40%;
+    }
+    &_line.-third {
+        top: 80%;
+    }
+    &.-active .trigger{
+        &_line.-first {
+            top: 40%;
+            transform: rotate(45deg) scaleX(1.4);
+        }
+        &_line.-second {
+            top: 40%;
+            opacity: 0;
+        }
+        &_line.-third {
+            top: 40%;
+            transform: rotate(-45deg) scaleX(1.4);
+        }
+    }
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
