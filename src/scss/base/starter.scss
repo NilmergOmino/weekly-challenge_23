@@ -17,12 +17,13 @@ html {
     }
 }
 body {
-    font-family: $font-main;
+    font-family: $fontMain;
 }
 
 h1,h2,h3,h4,h5,h6 {
     line-height: 1.25;
     margin: 0.8em 0;
+    font-family: $fontHeadings;
 }
 h1 { font-size: $size-1;}
 h2 { font-size: $size-2;}
@@ -33,8 +34,8 @@ h6 { font-size: $size-6;}
 p  { line-height: 1.5em;}
 
 button, input, optgroup, select, textarea {
-    font-family: $font-main;
+    font-family: $fontMain;
 }
-nav,main,aside,article,section,footer,header,figure,div {
+nav,main,aside,article,section,footer,header,figure,div,address {
     box-sizing: border-box;
 }

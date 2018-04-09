@@ -1,25 +1,50 @@
 .navbar {
-    @include flex(column,nowrap,space-around,center,center);
-    overflow: hidden;
+    @include flex(row,nowrap,space-between,center,center);
     color: white;
-    background-color: black;
+    transition: $timeFast;
     &_logo {
         margin: .5em 0;
-        font-size: 2em;
+        font-size: 1.8em;
+        font-family: $fontHeadings;
+        font-weight: 900;
+        user-select: none;
+        overflow-wrap: none;
+    }
+    &_logo:hover {
+        opacity: 0.9;
     }
     &_trigger {
         width: 30px;
         height: 30px;
-        position: fixed;
-        top: 20px;
-        right: 25px;
+        position: relative;
+        z-index: 150;
     }
     &_menu {
-        margin: .5em 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: $timeFast;
+        height: 100vh;
+        width: 100%;
+        transform-origin: right center;
+        transform: scaleX(0);
+        z-index: 120;
+    }
+    &_menu.-active {
+        transition: $timeMedium;
+        transform: scaleX(1);
+    }
+    &.-sticky {
+        background-color: rgba(black, 0.9);
+    }
+    &.-sticky .navbar{
+        &_logo {
+            margin: 0.5em 0;
+        }
     }
     @include screen(desktop) {
         @include flex(row,nowrap,space-between,stretch,center);
-        background-color: transparent;
         &_logo {
             margin: 1em 0;
             transition: $timeFast;
@@ -27,13 +52,17 @@
         &_trigger {
             display: none;
         }
-        &.-sticky {
-            background-color: rgba(black, 0.9);
+        &_menu {
+            position: static;
+            width: auto;
+            height: auto;
+            transition: 0;
+            transform: scaleX(1);
         }
-        &.-sticky .navbar{
-            &_logo {
-                margin: 0.5em 0;
-            }
+        &_menu.-active {
+            transition: 0;
+            transform: scaleX(1);
         }
+
     }
 }

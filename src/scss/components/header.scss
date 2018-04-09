@@ -1,0 +1,24 @@
+.header {
+    @include flex(column,nowrap,center,flex-start,center);
+    background-color: black;
+    background-image: url('../assets/office.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    &_box.-content {
+        @include flex(column,nowrap,center,flex-start,center);
+        width: 100%;
+    }
+
+    @include screen(tablet) {
+        &_box.-content {
+            width: 70%;
+        }
+    }
+
+    @include screen(desktop) {
+        &_box.-content {
+            width: 50%;
+        }
+    }
+}

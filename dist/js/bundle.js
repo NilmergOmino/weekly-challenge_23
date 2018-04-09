@@ -81,34 +81,45 @@ $(document).on('scroll', function () {
     } else {
         $('#navbar').removeClass('-sticky');
     }
+    $('._js-anchor').each(function (index, element) {
+        var target = $(element.hash);
+        var targetTop = target.offset().top - 1;
+        var targetBottom = target.offset().top + target.height();
+        var current = $(window).scrollTop();
+        if (targetTop <= current && targetBottom > current) {
+            $(element).addClass('-active');
+        } else {
+            $(element).removeClass('-active');
+        }
+    });
 });
 
-$('#trigger-nav').on('click', function () {
-    $('#navbar').toggleClass('-active');
-    $('#trigger-nav').toggleClass('-active');
+$('#trigger-menu').on('click', function () {
+    $('#menu').toggleClass('-active');
+    $('#trigger-menu').toggleClass('-active');
 });
 
-// $(document).ready(function(){
-//     $('._js-anchor').on('click', function(event){
-//         $('#menu').removeClass('-toggle');
-//         $('#trigger-menu').removeClass('-active');
-//         let target = this.hash.slice(1),
-//             hash = "#",
-//             targetTop = 0;
-//         if(target.length){
-//             hash = this.hash;
-//             targetTop = $('#'+target).offset().top;
-//         }
-//         $('html, body').animate({ scrollTop: targetTop }, 600, history.pushState(null,null,hash));
-//         event.preventDefault();
-//     })
-// })
+$(document).ready(function () {
+    $('._js-anchor').on('click', function (event) {
+        $('#menu').removeClass('-active');
+        $('#trigger-menu').removeClass('-active');
+        var target = this.hash.slice(1),
+            hash = "#",
+            targetTop = 0;
+        if (target.length) {
+            hash = this.hash;
+            targetTop = $('#' + target).offset().top;
+        }
+        $('html, body').animate({ scrollTop: targetTop }, 600, history.pushState(null, null, hash));
+        event.preventDefault();
+    });
+});
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Cannot find module 'uri-js'\n    at Function.Module._resolveFilename (module.js:542:15)\n    at Function.Module._load (module.js:472:25)\n    at Module.require (module.js:585:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/file-loader/node_modules/ajv/lib/compile/resolve.js:3:11)\n    at Module._compile (module.js:641:30)\n    at Object.Module._extensions..js (module.js:652:10)\n    at Module.load (module.js:560:32)\n    at tryModuleLoad (module.js:503:12)\n    at Function.Module._load (module.js:495:3)\n    at Module.require (module.js:585:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/file-loader/node_modules/ajv/lib/compile/index.js:3:15)\n    at Module._compile (module.js:641:30)\n    at Object.Module._extensions..js (module.js:652:10)\n    at Module.load (module.js:560:32)\n    at tryModuleLoad (module.js:503:12)\n    at Function.Module._load (module.js:495:3)\n    at Module.require (module.js:585:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/file-loader/node_modules/ajv/lib/ajv.js:3:21)\n    at Module._compile (module.js:641:30)\n    at Object.Module._extensions..js (module.js:652:10)\n    at Module.load (module.js:560:32)\n    at tryModuleLoad (module.js:503:12)\n    at Function.Module._load (module.js:495:3)\n    at Module.require (module.js:585:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/file-loader/node_modules/schema-utils/dist/validateOptions.js:15:12)\n    at Module._compile (module.js:641:30)\n    at runLoaders (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/loader-runner/lib/LoaderRunner.js:170:18\n    at loadLoader (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/loader-runner/lib/loadLoader.js:27:11)\n    at iteratePitchingLoaders (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/NormalModule.js:182:3)\n    at NormalModule.build (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/NormalModule.js:275:15)\n    at Compilation.buildModule (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/Compilation.js:151:10)\n    at factoryCallback (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/Compilation.js:342:12)\n    at factory (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/NormalModuleFactory.js:243:5)\n    at applyPluginsAsyncWaterfall (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/NormalModuleFactory.js:94:13)\n    at /var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/tapable/lib/Tapable.js:268:11\n    at NormalModuleFactory.params.normalModuleFactory.plugin (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/tapable/lib/Tapable.js:272:13)\n    at resolver (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/NormalModuleFactory.js:69:10)\n    at process.nextTick (/var/www/html/GIT-projects/templates/weekly-challenge_23/node_modules/webpack/lib/NormalModuleFactory.js:196:7)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)");
 
 /***/ }),
 /* 2 */

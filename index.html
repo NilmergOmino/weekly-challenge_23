@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Leckerli+One|Montserrat:700,900" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
     <title>challenge 23</title>
 </head>
 <body class="root">
     <nav class="root_navbar navbar _box-main" id="navbar">
         <a href="" class="navbar_logo _text-bold _link"><span class="_text-blue">!st</span> Agency</a>
-        <button class="navbar_trigger trigger" aria-label="toggle menu" id="trigger-nav">
+        <button class="navbar_trigger trigger" aria-label="toggle menu" id="trigger-menu">
             <span class="trigger_line -first"></span>
             <span class="trigger_line -second"></span>
             <span class="trigger_line -third"></span>
         </button>
-        <ul class="navbar_menu menu _text-caps">
-            <li class="menu_item"><a href="#" class="menu_link _link _js-anchor">home</a></li>
+        <ul class="navbar_menu menu _text-caps" id="menu">
+            <li class="menu_item"><a href="#home" class="menu_link -active _link _js-anchor">home</a></li>
             <li class="menu_item"><a href="#about-us" class="menu_link _link _js-anchor">about us</a></li>
             <li class="menu_item"><a href="#services" class="menu_link _link _js-anchor">services</a></li>
             <li class="menu_item"><a href="#profile" class="menu_link _link _js-anchor">profile</a></li>
@@ -25,15 +26,17 @@
             <li class="menu_item"><a href="#contact" class="menu_link _link _js-anchor">contact</a></li>
         </ul>
     </nav>
-    <header class="root_header header _box-main">
+    <header class="root_header header _box-main" id="home">
         <img src="" alt="" class="header_image">
-        <h1 class="header_heading">
-            <span class="_text-fancy">Hello</span><br>
-            My Name is <span class="_text-blue">John Doe</span>
-        </h1>
-        <p class="header_subHeading">Ceo | !st Agency</p>
-        <p class="header_paragraph _paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <button class="header_button _button _button-primary">Click here</button>
+        <div class="header_box -content">
+            <h1 class="header_heading">
+                <span class="_text-fancy">Hello</span><br>
+                My Name is <span class="_text-blue">John Doe</span>
+            </h1>
+            <p class="header_subHeading">Ceo | !st Agency</p>
+            <p class="header_paragraph _paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <button class="header_button _button _button-primary">Click here</button>
+        </div>
     </header>
     <main class="root_main main">
         <article class="main_aboutUs aboutUs _box-main" id="about-us">
@@ -106,8 +109,8 @@
         <article class="main_blog blog _box-main" id="blog">
             <div class="blog_box -first">
                 <header class="blog_minorHeader minorHeader -dark">
-                    <h2 class="minorHeader_heading _text-fancy">Client</h2>
-                    <p class="minorHeader_subHeading">What I Do..</p>
+                    <h2 class="minorHeader_heading _text-fancy">Blog</h2>
+                    <p class="minorHeader_subHeading">I write Beautiful Thinks</p>
                 </header>
                 <p class="blog_paragraph _paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <section class="blog_blogItem blogItem -number1 -light _text-center">
