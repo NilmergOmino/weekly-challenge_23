@@ -6,8 +6,8 @@
     background-size: cover;
     background-attachment: fixed;
     color: white;
-    padding-top: 6em;
-    padding-bottom: 6em;
+    padding-top: 7em;
+    padding-bottom: 7em;
     overflow: hidden;
     &:before {
 
@@ -35,19 +35,19 @@
     }
     &_text {
         display: block;
-        font-size: 1em;
+        font-size: .8em;
+        margin-bottom: .8em;
     }
     &_subHeading {
         font-family: $fontHeadings;
-        font-size: 2.2em;
+        font-size: 1.8em;
         margin: .2em 0;
-        font-weight: 400;
     }
     &_paragraph {
-
+        margin: 2.5em 0;
     }
     &_button {
-        margin: 2em 1em;
+        margin: 2em 1em 0 1em;
     }
     @include screen('min-width: 380px'){
         overflow: visible;
@@ -80,7 +80,6 @@
             width: 65%;
         }
         &_image {
-            // right: 12%;
             max-width: 55%;
             opacity: 1;
         }

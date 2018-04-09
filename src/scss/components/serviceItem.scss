@@ -1,0 +1,15 @@
+.serviceItem {
+    @include flex(row,nowrap,center,center,center);
+    &_image {
+
+    }
+    &_box.-content {
+
+    }
+    &_heading {
+        font-size: 1.2em;
+    }
+    &_paragraph {
+
+    }
+}

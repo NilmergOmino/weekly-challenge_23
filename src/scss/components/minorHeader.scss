@@ -1,0 +1,29 @@
+.minorHeader {
+    &_heading {
+        font-size: 2em;
+        margin:0;
+    }
+    &_subHeading {
+        font-size: 2em;
+        font-weight: 900;
+        font-family: $fontHeadings;
+        margin: 0;
+    }
+}
+
+.minorHeader.-light .minorHeader {
+    &_heading {
+        color: white;
+    }
+    &_subHeading {
+        color: white;
+    }
+}
+.minorHeader.-dark .minorHeader {
+    &_heading {
+        color: $colorScorpion;
+    }
+    &_subHeading {
+        color: black;
+    }
+}

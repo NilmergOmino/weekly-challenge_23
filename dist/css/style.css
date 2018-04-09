@@ -520,17 +520,18 @@ nav, main, aside, article, section, footer, header, figure, div, address {
   cursor: pointer;
   padding: 0.7em 1.5em; }
   ._button-primary {
+    font-weight: bold;
     margin: 0;
     border: 0;
     border-radius: 1.5em;
     padding: 0 2em;
     height: 2.5em;
-    min-width: 8em;
+    min-width: 9em;
     color: white;
     background-color: #00aeed;
     transition: 0.3s; }
   ._button-primary:hover, ._button-primary:focus {
-    opacity: 0.8; }
+    background-color: #0081FF; }
 
 ._box-clear {
   display: block;
@@ -540,7 +541,9 @@ nav, main, aside, article, section, footer, header, figure, div, address {
 
 ._box-main {
   padding-left: 5%;
-  padding-right: 5%; }
+  padding-right: 5%;
+  padding-top: 6em;
+  padding-bottom: 6em; }
   @media only screen and (min-width: 768px) {
     ._box-main {
       padding-left: 10%;
@@ -597,7 +600,9 @@ nav, main, aside, article, section, footer, header, figure, div, address {
   align-items: center;
   align-content: center;
   color: white;
-  transition: 0.3s; }
+  transition: 0.3s;
+  padding-top: 0;
+  padding-bottom: 0; }
   .navbar_logo {
     margin: .5em 0;
     font-size: 1.8em;
@@ -785,8 +790,8 @@ nav, main, aside, article, section, footer, header, figure, div, address {
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  padding-top: 6em;
-  padding-bottom: 6em;
+  padding-top: 7em;
+  padding-bottom: 7em;
   overflow: hidden; }
   .header_image {
     position: absolute;
@@ -812,14 +817,16 @@ nav, main, aside, article, section, footer, header, figure, div, address {
     margin: 0; }
   .header_text {
     display: block;
-    font-size: 1em; }
+    font-size: .8em;
+    margin-bottom: .8em; }
   .header_subHeading {
     font-family: "Montserrat", sans-serif;
-    font-size: 2.2em;
-    margin: .2em 0;
-    font-weight: 400; }
+    font-size: 1.8em;
+    margin: .2em 0; }
+  .header_paragraph {
+    margin: 2.5em 0; }
   .header_button {
-    margin: 2em 1em; }
+    margin: 2em 1em 0 1em; }
   @media only screen and (min-width: 380px) {
     .header {
       overflow: visible; } }
@@ -850,5 +857,112 @@ nav, main, aside, article, section, footer, header, figure, div, address {
     .header_image {
       right: 12%;
       max-width: 65%; } }
+
+.aboutUs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  color: white;
+  background-color: #0081FF; }
+  .aboutUs_heading {
+    padding: 0;
+    margin: 0;
+    font-size: 2em; }
+  .aboutUs_subHeading {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 1.7em;
+    margin-bottom: 0; }
+  .aboutUs_box.-second {
+    margin-top: 2em; }
+  .aboutUs_button {
+    margin-top: 3em;
+    background-color: #3b4374; }
+  .aboutUs_button:hover, .aboutUs_button:focus {
+    background-color: #212641; }
+  @media only screen and (min-width: 550px) {
+    .aboutUs_box.-first, .aboutUs_box.-second {
+      width: 75%; } }
+  @media only screen and (min-width: 768px) {
+    .aboutUs_box.-first, .aboutUs_box.-second {
+      width: 70%; } }
+  @media only screen and (min-width: 1024px) {
+    .aboutUs {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center; }
+      .aboutUs_box.-first, .aboutUs_box.-second {
+        width: 45%;
+        margin-top: 0; } }
+
+.services {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #0079f0;
+  color: white; }
+  .services_minorHeader {
+    width: 100%; }
+  .services_serviceItem {
+    width: 100%;
+    margin-top: 3em; }
+  @media only screen and (min-width: 460px) {
+    .services_serviceItem {
+      width: 80%; } }
+  @media only screen and (min-width: 550px) {
+    .services_serviceItem {
+      width: 70%; } }
+  @media only screen and (min-width: 768px) {
+    .services_serviceItem {
+      width: 60%; } }
+  @media only screen and (min-width: 1024px) {
+    .services {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center; }
+      .services_serviceItem {
+        width: 40%; } }
+  @media only screen and (min-width: 1400px) {
+    .services_serviceItem {
+      width: 30%; } }
+
+.serviceItem {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  .serviceItem_heading {
+    font-size: 1.2em; }
+
+.minorHeader_heading {
+  font-size: 2em;
+  margin: 0; }
+
+.minorHeader_subHeading {
+  font-size: 2em;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  margin: 0; }
+
+.minorHeader.-light .minorHeader_heading {
+  color: white; }
+
+.minorHeader.-light .minorHeader_subHeading {
+  color: white; }
+
+.minorHeader.-dark .minorHeader_heading {
+  color: #575757; }
+
+.minorHeader.-dark .minorHeader_subHeading {
+  color: black; }
 
 /*# sourceMappingURL=style.css.map*/

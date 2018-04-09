@@ -8,6 +8,8 @@
     &-main{
         padding-left: 5%;
         padding-right: 5%;
+        padding-top: 6em;
+        padding-bottom: 6em;
         @include screen(tablet) {
             padding-left: 10%;
             padding-right: 10%;

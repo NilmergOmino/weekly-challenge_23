@@ -1,0 +1,38 @@
+.services {
+    @include flex(column,nowrap,center,center,center);
+    background-color: darken($colorAzureRadiance, 3%);
+    color: white;
+    &_minorHeader {
+        width: 100%;
+    }
+    &_serviceItem {
+        width: 100%;
+        margin-top: 3em;
+    }
+    @include screen(mobile) {
+        &_serviceItem {
+            width: 80%;
+        }
+    }
+    @include screen(mobileBig) {
+        &_serviceItem {
+            width: 70%;
+        }
+    }
+    @include screen(tablet) {
+        &_serviceItem {
+            width: 60%;
+        }
+    }
+    @include screen(desktop) {
+        @include flex(row,wrap,space-around,center,center);
+        &_serviceItem {
+            width: 40%;
+        }
+    }
+    @include screen('min-width: 1400px') {
+        &_serviceItem {
+            width: 30%;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.aboutUs {
+    @include flex(column,nowrap,flex-start,flex-start,center);
+    color: white;
+    background-color: $colorAzureRadiance;
+
+    &_box.-first {
+
+    }
+    &_header {
+
+    }
+    &_heading {
+        padding: 0;
+        margin: 0;
+        font-size: 2em;
+    }
+    &_subHeading {
+        font-family: $fontHeadings;
+        font-weight: 900;
+        font-size: 1.7em;
+        margin-bottom: 0;
+    }
+    &_box.-second {
+        margin-top: 2em;
+    }
+    &_paragraph {
+
+    }
+    &_button {
+        margin-top: 3em;
+        background-color: $colorEastBay;
+    }
+    &_button:hover,
+    &_button:focus {
+        background-color: darken($colorEastBay, 15%);
+    }
+    @include screen(mobileBig){
+        &_box.-first,
+        &_box.-second {
+            width: 75%;
+        }
+    }
+    @include screen(tablet) {
+        &_box.-first,
+        &_box.-second {
+            width: 70%;
+        }
+    }
+    @include screen(desktop) {
+        @include flex(row,nowrap,space-between,center,center);
+        &_box.-first,
+        &_box.-second {
+            width: 45%;
+            margin-top: 0;
+        }
+    }
+}
