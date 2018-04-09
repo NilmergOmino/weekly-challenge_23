@@ -1,6 +1,7 @@
 @mixin screen($size) {
     $desktop: "(min-width: 1024px)";
     $tablet: "(min-width: 768px)";
+    $mobileBig: "(min-width: 550px)";
     $mobile: "(min-width: 460px)";
     @if $size == desktop {
         @media only screen and #{$desktop} {
@@ -9,6 +10,11 @@
     }
     @else if $size == tablet {
         @media only screen and #{$tablet} {
+            @content;
+        }
+    }
+    @else if $size == mobileBig {
+        @media only screen and #{$mobileBig} {
             @content;
         }
     }

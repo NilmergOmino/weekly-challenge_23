@@ -508,12 +508,29 @@ nav, main, aside, article, section, footer, header, figure, div, address {
   box-sizing: border-box; }
 
 ._button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   box-sizing: border-box;
   background-color: transparent;
   border-radius: 0;
   border: 1px solid inherit;
   cursor: pointer;
   padding: 0.7em 1.5em; }
+  ._button-primary {
+    margin: 0;
+    border: 0;
+    border-radius: 1.5em;
+    padding: 0 2em;
+    height: 2.5em;
+    min-width: 8em;
+    color: white;
+    background-color: #00aeed;
+    transition: 0.3s; }
+  ._button-primary:hover, ._button-primary:focus {
+    opacity: 0.8; }
 
 ._box-clear {
   display: block;
@@ -536,6 +553,25 @@ nav, main, aside, article, section, footer, header, figure, div, address {
 ._link {
   text-decoration: none;
   color: inherit; }
+
+._effect-darken {
+  position: relative; }
+
+._effect-darken:before {
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0; }
+
+._paragraph {
+  font-size: 1.1em; }
+  ._paragraph-small {
+    font-size: 0.9em; }
 
 .root_navbar {
   position: fixed;
@@ -572,7 +608,7 @@ nav, main, aside, article, section, footer, header, figure, div, address {
         -ms-user-select: none;
             user-select: none;
     overflow-wrap: none; }
-  .navbar_logo:hover {
+  .navbar_logo:hover, .navbar_logo:focus {
     opacity: 0.9; }
   .navbar_trigger {
     width: 30px;
@@ -692,8 +728,9 @@ nav, main, aside, article, section, footer, header, figure, div, address {
     font-weight: 700;
     font-size: 1.2em;
     transition: 0.3s; }
-  .menu_link:hover {
-    color: #0081FF; }
+  .menu_link:hover, .menu_link:focus {
+    color: #0081FF;
+    outline: none; }
   .menu_link:before {
     content: '';
     width: .5em;
@@ -741,19 +778,77 @@ nav, main, aside, article, section, footer, header, figure, div, address {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  align-content: center; }
+  align-content: center;
+  background-color: black;
+  background-image: url(../assets/office-min.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  overflow: hidden; }
+  .header_image {
+    position: absolute;
+    opacity: 0.8;
+    z-index: 4;
+    top: 15%;
+    left: 5%;
+    max-width: 80%;
+    min-width: 350px;
+    max-height: 90%; }
   .header_box.-content {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
     align-content: center;
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    z-index: 5; }
+  .header_heading {
+    font-weight: 900;
+    font-size: 2.5em;
+    margin: 0; }
+  .header_text {
+    display: block;
+    font-size: 1em; }
+  .header_subHeading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.2em;
+    margin: .2em 0;
+    font-weight: 400; }
+  .header_button {
+    margin: 2em 1em; }
+  @media only screen and (min-width: 380px) {
+    .header {
+      overflow: visible; } }
+  @media only screen and (min-width: 460px) {
+    .header_image {
+      left: auto;
+      right: 5%;
+      max-width: 70%;
+      min-width: 0; } }
+  @media only screen and (min-width: 550px) {
+    .header_box.-content {
+      width: 75%; } }
   @media only screen and (min-width: 768px) {
     .header_box.-content {
-      width: 70%; } }
+      width: 70%; }
+    .header_image {
+      right: 8%;
+      max-width: 60%; } }
   @media only screen and (min-width: 1024px) {
     .header_box.-content {
-      width: 50%; } }
+      width: 65%; }
+    .header_image {
+      max-width: 55%;
+      opacity: 1; } }
+  @media only screen and (min-width: 1400px) {
+    .header_box.-content {
+      width: 50%; }
+    .header_image {
+      right: 12%;
+      max-width: 65%; } }
 
 /*# sourceMappingURL=style.css.map*/

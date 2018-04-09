@@ -1,24 +1,98 @@
 .header {
     @include flex(column,nowrap,center,flex-start,center);
     background-color: black;
-    background-image: url('../assets/office.png');
+    background-image: url('../assets/office-min.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    color: white;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    overflow: hidden;
+    &:before {
+
+    }
+    &_image {
+        position: absolute;
+        opacity: 0.8;
+        z-index: 4;
+        top: 15%;
+        left: 5%;
+        max-width: 80%;
+        min-width: 350px;
+        max-height: 90%;
+    }
     &_box.-content {
         @include flex(column,nowrap,center,flex-start,center);
         width: 100%;
+        position: relative;
+        z-index: 5;
     }
+    &_heading {
+        font-weight: 900;
+        font-size: 2.5em;
+        margin: 0;
+    }
+    &_text {
+        display: block;
+        font-size: 1em;
+    }
+    &_subHeading {
+        font-family: $fontHeadings;
+        font-size: 2.2em;
+        margin: .2em 0;
+        font-weight: 400;
+    }
+    &_paragraph {
 
+    }
+    &_button {
+        margin: 2em 1em;
+    }
+    @include screen('min-width: 380px'){
+        overflow: visible;
+    }
+    @include screen(mobile){
+        &_image {
+            left: auto;
+            right: 5%;
+            max-width: 70%;
+            min-width: 0;
+        }
+    }
+    @include screen(mobileBig){
+        &_box.-content {
+            width: 75%;
+        }
+    }
     @include screen(tablet) {
         &_box.-content {
             width: 70%;
+        }
+        &_image {
+            right: 8%;
+            max-width: 60%;
         }
     }
 
     @include screen(desktop) {
         &_box.-content {
+            width: 65%;
+        }
+        &_image {
+            // right: 12%;
+            max-width: 55%;
+            opacity: 1;
+        }
+    }
+
+    @include screen('min-width: 1400px'){
+        &_box.-content {
             width: 50%;
+        }
+        &_image {
+            right: 12%;
+            max-width: 65%;
         }
     }
 }

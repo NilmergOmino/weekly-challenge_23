@@ -23,8 +23,10 @@
         font-size: 1.2em;
         transition: $timeFast;
     }
-    &_link:hover {
+    &_link:hover,
+    &_link:focus {
         color: $colorAzureRadiance;
+        outline: none;
     }
     &_link:before {
         content: '';

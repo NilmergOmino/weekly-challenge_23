@@ -1,8 +1,25 @@
 ._button{
+    @include flex(row,nowrap,center,center,center);
     box-sizing: border-box;
     background-color: transparent;
     border-radius: 0;
     border: 1px solid inherit;
     cursor: pointer;
     padding: 0.7em 1.5em;
+
+    &-primary {
+        margin: 0;
+        border: 0;
+        border-radius: 1.5em;
+        padding: 0 2em;
+        height: 2.5em;
+        min-width: 8em;
+        color: white;
+        background-color: $colorCerulean;
+        transition: $timeFast;
+    }
+    &-primary:hover,
+    &-primary:focus {
+        opacity: 0.8;
+    }
 }

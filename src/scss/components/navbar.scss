@@ -10,7 +10,8 @@
         user-select: none;
         overflow-wrap: none;
     }
-    &_logo:hover {
+    &_logo:hover,
+    &_logo:focus {
         opacity: 0.9;
     }
     &_trigger {
