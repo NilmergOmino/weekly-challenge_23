@@ -1,0 +1,62 @@
+.footer {
+    @include flex(row, wrap,center,flex-start,center);
+    background-color: black;
+    background-image: url('../assets/phone-screen-min.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+    padding-bottom: 4em;
+    &:before {
+        background-color: rgba(black, .85);
+    }
+
+    &_heading,
+    &_addressInfo,
+    &_contactForm,
+    &_socials,
+    &_paragraph {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+    }
+
+    &_heading {
+        font-size: 2em;
+        margin-top: 0;
+    }
+    &_addressInfo {
+
+    }
+    &_contactForm {
+
+    }
+    &_socials {
+        width: 100%;
+        margin-top: 4em;
+    }
+    &_paragraph {
+        width: 100%;
+        margin: 0;
+    }
+    &_paragraph.-designInfo {
+        margin-top: 6em;
+        margin-bottom: 1em;
+    }
+    &_link {
+        transition: $timeFast;
+    }
+    &_link:hover,
+    &_link:focus {
+        color: $colorAzureRadiance;
+    }
+    @include screen(tablet) {
+        &_addressInfo {
+            width: 50%;
+        }
+        &_contactForm {
+            width: 50%;
+        }
+    }
+}

@@ -18,11 +18,12 @@
     &_box.-container {
         @include flex(row,wrap,space-around,center,center);
         width: 100%;
-        margin-top: 5em;
+        margin-top: 4em;
     }
     &_image {
-        margin: 2em;
         transition: $timeFast;
+        margin: 1em;
+        max-width: 8em;
     }
     &_image:hover {
         opacity: 0.8;
@@ -39,6 +40,10 @@
         }
     }
     @include screen(desktop) {
+        &_image {
+            margin: 2em;
+            max-width: 12em;
+        }
         &_paragraph {
             width: 55%;
             max-width: 650px;
@@ -59,6 +64,9 @@
         &_paragraph {
             width: 55%;
             max-width: 850px;
+        }
+        &_image {
+            max-width: 16em;
         }
     }
 }

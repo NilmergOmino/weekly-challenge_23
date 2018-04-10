@@ -1,0 +1,30 @@
+.socials {
+    @include flex(row,wrap,center,center,center);
+    padding: 0 1em;
+
+    &_item {
+        margin: 1em;
+    }
+    &_link {
+        @include flex(row, nowrap,center,center,center);
+        font-size: 2em;
+        padding: 0.3em;
+        border: .12em solid white;
+        border-radius: 50%;
+        transition: $timeFast;
+    }
+    &_link:hover,
+    &_link:focus {
+        color: $colorAzureRadiance;
+        transform: rotate(-100deg);
+        background-color: black;
+        outline: none;
+    }
+    &_icon {
+        transition: $timeFast;
+    }
+    &_link:hover &_icon,
+    &_link:focus &_icon {
+        transform: rotate(100deg);
+    }
+}

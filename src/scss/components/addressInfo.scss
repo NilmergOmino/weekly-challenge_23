@@ -1,0 +1,43 @@
+.addressInfo {
+    @include flex(column, nowrap,center,flex-start,center);
+    &_heading {
+        font-weight: 900;
+        margin-top: 0;
+        margin-bottom: 2em;
+    }
+    &_box.-outer {
+        @include flex(row,nowrap,flex-start,center,stretch);
+        margin-bottom: 3em;
+    }
+    &_box.-imageContainer {
+        @include flex(row,nowrap,center,center,center);
+        height: 4em;
+        width: 5em;
+    }
+    &_image {
+        margin-right: 2em;
+        height: auto;
+        width: auto;
+        max-height: 90%;
+        max-width: 100%;
+    }
+    &_box.-inner {
+        @include flex(column,nowrap,center,flex-start,center);
+    }
+    &_subHeading,
+    &_paragraph {
+        margin: 0;
+        font-size: 0.9em;
+    }
+    &_subHeading {
+        font-size: 1em;
+        margin-bottom: 0.2em;
+    }
+    &_link {
+        transition: $timeFast;
+    }
+    &_link:hover,
+    &_link:focus {
+        color: $colorAzureRadiance;
+    }
+}

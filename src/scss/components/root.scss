@@ -1,5 +1,5 @@
 .root {
-    
+
     &_navbar {
         position: fixed;
         width: 100%;
@@ -15,7 +15,7 @@
 
     }
     &_footer {
-
+        min-height: 100vh;
     }
     @include screen(desktop) {
         &_navbar {
