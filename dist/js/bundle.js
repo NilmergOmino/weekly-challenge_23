@@ -84,7 +84,7 @@ $(document).on('scroll', function () {
     $('._js-anchor').each(function (index, element) {
         var target = $(element.hash);
         var targetTop = target.offset().top - 1;
-        var targetBottom = target.offset().top + target.height();
+        var targetBottom = target.offset().top + target.outerHeight() - 1;
         var current = $(window).scrollTop();
         if (targetTop <= current && targetBottom > current) {
             $(element).addClass('-active');
@@ -111,6 +111,8 @@ $(document).ready(function () {
             targetTop = $('#' + target).offset().top;
         }
         $('html, body').animate({ scrollTop: targetTop }, 600, history.pushState(null, null, hash));
+        $('#' + target).attr('tabindex', -1);
+        $('#' + target).focus();
         event.preventDefault();
     });
 });

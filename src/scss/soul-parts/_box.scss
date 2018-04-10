@@ -1,11 +1,11 @@
-._box{
-    &-clear{
+._box {
+    &-clear {
         display: block;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    &-main{
+    &-main {
         padding-left: 5%;
         padding-right: 5%;
         padding-top: 6em;
@@ -17,6 +17,9 @@
         @include screen(desktop) {
             padding-left: 15%;
             padding-right: 15%;
+        }
+        &:focus {
+            outline: none;
         }
     }
 }

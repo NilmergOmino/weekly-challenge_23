@@ -10,7 +10,7 @@
     padding-bottom: 7em;
     overflow: hidden;
     &:before {
-
+        background-color: rgba(black,0.85);
     }
     &_image {
         position: absolute;
@@ -66,6 +66,9 @@
         }
     }
     @include screen(tablet) {
+        &:before {
+            background-color: rgba(black,0.7);
+        }
         &_box.-content {
             width: 70%;
         }

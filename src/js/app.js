@@ -12,7 +12,7 @@ $(document).on('scroll', function(){
     $('._js-anchor').each(function(index, element){
         let target = $(element.hash);
         let targetTop = target.offset().top-1;
-        let targetBottom = target.offset().top + target.height();
+        let targetBottom = target.offset().top + target.outerHeight()-1;
         let current = $(window).scrollTop();
         if( targetTop <= current && targetBottom > current){
             $(element).addClass('-active');
@@ -40,6 +40,8 @@ $(document).ready(function(){
             targetTop = $('#'+target).offset().top;
         }
         $('html, body').animate({ scrollTop: targetTop }, 600, history.pushState(null,null,hash));
+        $('#'+target).attr('tabindex',-1);
+        $('#'+target).focus();
         event.preventDefault();
     })
 })

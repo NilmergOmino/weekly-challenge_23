@@ -1,0 +1,64 @@
+.client {
+    @include flex(column,nowrap,center,center,center);
+    color: white;
+    background-color: black;
+    background-image: url('../assets/mountains-min.png');
+    background-size: cover;
+    background-attachment: fixed;
+    &:before {
+        background-color: rgba(black, 0.8);
+    }
+    &_minorHeader {
+
+    }
+    &_paragraph {
+        width: 100%;
+        margin-top: 2em;
+    }
+    &_box.-container {
+        @include flex(row,wrap,space-around,center,center);
+        width: 100%;
+        margin-top: 5em;
+    }
+    &_image {
+        margin: 2em;
+        transition: $timeFast;
+    }
+    &_image:hover {
+        opacity: 0.8;
+    }
+    &_minorHeader,
+    &_paragraph,
+    &_box.-container {
+        position: relative;
+        z-index: 5;
+    }
+    @include screen(mobileBig) {
+        &_paragraph {
+            width: 60%;
+        }
+    }
+    @include screen(desktop) {
+        &_paragraph {
+            width: 55%;
+            max-width: 650px;
+        }
+    }
+    @include screen('min-width: 1660px') {
+        &_box.-container {
+            @include flex(row,wrap,space-between,center,center);
+        }
+        &_image.-first {
+            margin-left: 0;
+        }
+        &_image.-last {
+            margin-right: 0;
+        }
+    }
+    @include screen('min-width: 2000px') {
+        &_paragraph {
+            width: 55%;
+            max-width: 850px;
+        }
+    }
+}

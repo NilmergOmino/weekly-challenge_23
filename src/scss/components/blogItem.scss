@@ -1,0 +1,87 @@
+.blogItem {
+    @include flex(column,nowrap,space-between,center,center);
+    padding: 1.5em 1.5em;
+    transition: $timeFast;
+    &_heading {
+        margin: 0;
+        font-weight: 900;
+    }
+    &_paragraph,
+    &_time {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    &_heading,
+    &_paragraph,
+    &_time {
+        position: relative;
+        z-index: 5;
+    }
+    &.-light {
+        color: white;
+    }
+    &.-dark {
+        color: darken($colorScorpion, 4%);
+    }
+    &.-n1 {
+        background-color: lighten($colorAzureRadiance, 2%);
+        &:hover {
+            background-color: lighten($colorAzureRadiance, 7%);
+        }
+    }
+    &.-n2 {
+        background-color: #eaeaea;
+        &:hover {
+            background-color: darken(#eaeaea, 5%);
+        }
+    }
+    &.-n3 {
+        background-color: black;
+        &:hover {
+            background-color: rgba(black, .85);
+        }
+    }
+    &.-n4 {
+        background-color: black;
+        background-image: url('../assets/tarrace-min.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        justify-content: center;
+        &:hover:before {
+            background-color: rgba(black, .6);
+        }
+    }
+    &.-n5 {
+        background-color: #e91d62;
+        justify-content: center;
+        &:hover {
+            background-color: darken(#e91d62, 7%);
+        }
+    }
+}
+.blogItem.-n1 .blogItem {
+    &_paragraph {
+        margin-top: .5em;
+        margin-bottom: 2em;
+    }
+}
+.blogItem.-n2 .blogItem,
+.blogItem.-n3 .blogItem {
+    &_heading {
+        margin: 1em 0;
+    }
+}
+.blogItem.-n4 .blogItem {
+    &_heading {
+        margin-top: 5em;
+        margin-bottom: 1em;
+    }
+}
+.blogItem.-n5 .blogItem {
+    &_heading {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+}

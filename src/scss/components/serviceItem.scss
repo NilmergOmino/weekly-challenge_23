@@ -1,15 +1,21 @@
 .serviceItem {
-    @include flex(row,nowrap,center,center,center);
+    @include flex(row,nowrap,center,flex-start,center);
     &_image {
-
+        width: 4em;
+        height: auto;
+        margin-right: 35px;
+    }
+    &_image.-eye {
+        margin-top: 0.5em;
     }
     &_box.-content {
 
     }
     &_heading {
         font-size: 1.2em;
+        margin-top: 0;
     }
     &_paragraph {
-
+        margin-top: 1.5em;
     }
 }

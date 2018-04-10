@@ -1,0 +1,99 @@
+.gallery {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20vw 20vw 20vw 20vw 20vw 20vw 20vw 20vw 20vw 20vw;
+    width: 100%;
+    margin-top: 4em;
+    &_box {
+        overflow: hidden;
+        @include flex(row,nowrap,center,center,center);
+        &.-n1 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        &.-n2 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+        &.-n3 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+        &.-n4 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 6;
+            grid-row-end: 11;
+        }
+        &.-n5 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 6;
+            grid-row-end: 9;
+        }
+        &.-n6 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 9;
+            grid-row-end: 11;
+        }
+    }
+    &_image {
+        height: 100%;
+        width: auto;
+
+        &.-n1 {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @include screen(desktop) {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 10vw 10vw 10vw 10vw 10vw;
+        &_box {
+            &.-n1 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+            &.-n2 {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 4;
+                grid-row-end: 6;
+            }
+            &.-n3 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 4;
+                grid-row-end: 6;
+            }
+            &.-n4 {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 6;
+            }
+            &.-n5 {
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+            &.-n6 {
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 4;
+                grid-row-end: 6;
+            }
+        }
+    }
+}

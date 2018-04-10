@@ -31,8 +31,10 @@
         }
     }
     @include screen('min-width: 1400px') {
+        @include flex(row,wrap,space-between,center,center);
         &_serviceItem {
             width: 30%;
+            max-width: 450px;
         }
     }
 }
