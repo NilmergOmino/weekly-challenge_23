@@ -32,6 +32,7 @@
     &_input:focus {
         background-color: #eaeaea;
         color: darken($colorScorpion, 14%);
+        outline: none;
     }
     &_input.-textarea {
         height: 5em;
