@@ -51,7 +51,7 @@
     &_link:focus {
         color: $colorAzureRadiance;
     }
-    @include screen(tablet) {
+    @include screen(mobileBig) {
         &_addressInfo {
             width: 50%;
         }

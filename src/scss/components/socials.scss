@@ -3,28 +3,43 @@
     padding: 0 1em;
 
     &_item {
-        margin: 1em;
+        font-size: 2em;
+        margin: .5em;
+        padding: 0;
     }
     &_link {
         @include flex(row, nowrap,center,center,center);
-        font-size: 2em;
-        padding: 0.3em;
-        border: .12em solid white;
+        box-sizing: border-box;
+        width: 2em;
+        height: 2em;
         border-radius: 50%;
+        transition: $timeFast;
+        position: relative;
+        z-index: 6;
+    }
+    &_link:before {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        border: .13em solid white;
+        z-index: 7;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform-origin: center center;
         transition: $timeFast;
     }
     &_link:hover,
     &_link:focus {
         color: $colorAzureRadiance;
-        transform: rotate(-100deg);
         background-color: black;
         outline: none;
     }
-    &_icon {
-        transition: $timeFast;
+    &_link:hover:before,
+    &_link:focus:before {
+        transform: rotate(-100deg) scaleX(1.1);
     }
-    &_link:hover &_icon,
-    &_link:focus &_icon {
-        transform: rotate(100deg);
+    &_icon {
+
     }
 }

@@ -798,19 +798,20 @@ nav, main, aside, article, section, footer, header, figure, div, address {
   background-attachment: fixed;
   color: white;
   padding-top: 7em;
-  padding-bottom: 7em;
-  overflow: hidden; }
+  padding-bottom: 7em; }
   .header:before {
     background-color: rgba(0, 0, 0, 0.85); }
-  .header_image {
+  .header_decoration {
     position: absolute;
-    opacity: 0.8;
     z-index: 4;
-    top: 15%;
-    left: 5%;
-    max-width: 80%;
-    min-width: 350px;
-    max-height: 90%; }
+    bottom: -5%;
+    right: 3%;
+    width: 45%;
+    height: 85%;
+    background-image: url(../assets/man-min.png);
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat; }
   .header_box.-content {
     display: flex;
     flex-flow: column nowrap;
@@ -836,15 +837,6 @@ nav, main, aside, article, section, footer, header, figure, div, address {
     margin: 2.5em 0; }
   .header_button {
     margin: 2em 1em 0 1em; }
-  @media only screen and (min-width: 380px) {
-    .header {
-      overflow: visible; } }
-  @media only screen and (min-width: 460px) {
-    .header_image {
-      left: auto;
-      right: 5%;
-      max-width: 70%;
-      min-width: 0; } }
   @media only screen and (min-width: 550px) {
     .header_box.-content {
       width: 75%; } }
@@ -852,22 +844,16 @@ nav, main, aside, article, section, footer, header, figure, div, address {
     .header:before {
       background-color: rgba(0, 0, 0, 0.7); }
     .header_box.-content {
-      width: 70%; }
-    .header_image {
-      right: 8%;
-      max-width: 60%; } }
+      width: 60%; } }
   @media only screen and (min-width: 1024px) {
     .header_box.-content {
-      width: 65%; }
-    .header_image {
-      max-width: 55%;
-      opacity: 1; } }
+      width: 65%; } }
   @media only screen and (min-width: 1400px) {
     .header_box.-content {
       width: 50%; }
-    .header_image {
-      right: 12%;
-      max-width: 65%; } }
+    .header_decoration {
+      right: 13%;
+      width: 50%; } }
 
 .aboutUs {
   display: flex;
@@ -1284,7 +1270,7 @@ nav, main, aside, article, section, footer, header, figure, div, address {
     transition: 0.3s; }
   .footer_link:hover, .footer_link:focus {
     color: #0081FF; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 550px) {
     .footer_addressInfo {
       width: 50%; }
     .footer_contactForm {
@@ -1408,29 +1394,40 @@ nav, main, aside, article, section, footer, header, figure, div, address {
   align-content: center;
   padding: 0 1em; }
   .socials_item {
-    margin: 1em; }
+    font-size: 2em;
+    margin: .5em;
+    padding: 0; }
   .socials_link {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    font-size: 2em;
-    padding: 0.3em;
-    border: .12em solid white;
+    box-sizing: border-box;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
+    transition: 0.3s;
+    position: relative;
+    z-index: 6; }
+  .socials_link:before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    border: .13em solid white;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
     transition: 0.3s; }
   .socials_link:hover, .socials_link:focus {
     color: #0081FF;
-    -webkit-transform: rotate(-100deg);
-            transform: rotate(-100deg);
     background-color: black;
     outline: none; }
-  .socials_icon {
-    transition: 0.3s; }
-  .socials_link:hover .socials_icon,
-  .socials_link:focus .socials_icon {
-    -webkit-transform: rotate(100deg);
-            transform: rotate(100deg); }
+  .socials_link:hover:before, .socials_link:focus:before {
+    -webkit-transform: rotate(-100deg) scaleX(1.1);
+            transform: rotate(-100deg) scaleX(1.1); }
 
 /*# sourceMappingURL=style.css.map*/

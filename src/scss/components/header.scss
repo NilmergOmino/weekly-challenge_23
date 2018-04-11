@@ -8,19 +8,20 @@
     color: white;
     padding-top: 7em;
     padding-bottom: 7em;
-    overflow: hidden;
     &:before {
         background-color: rgba(black,0.85);
     }
-    &_image {
+    &_decoration {
         position: absolute;
-        opacity: 0.8;
         z-index: 4;
-        top: 15%;
-        left: 5%;
-        max-width: 80%;
-        min-width: 350px;
-        max-height: 90%;
+        bottom: -5%;
+        right: 3%;
+        width: 45%;
+        height: 85%;
+        background-image: url('../assets/man-min.png');
+        background-size: contain;
+        background-position: right bottom;
+        background-repeat: no-repeat;
     }
     &_box.-content {
         @include flex(column,nowrap,center,flex-start,center);
@@ -49,17 +50,6 @@
     &_button {
         margin: 2em 1em 0 1em;
     }
-    @include screen('min-width: 380px'){
-        overflow: visible;
-    }
-    @include screen(mobile){
-        &_image {
-            left: auto;
-            right: 5%;
-            max-width: 70%;
-            min-width: 0;
-        }
-    }
     @include screen(mobileBig){
         &_box.-content {
             width: 75%;
@@ -70,31 +60,21 @@
             background-color: rgba(black,0.7);
         }
         &_box.-content {
-            width: 70%;
-        }
-        &_image {
-            right: 8%;
-            max-width: 60%;
+            width: 60%;
         }
     }
-
     @include screen(desktop) {
         &_box.-content {
             width: 65%;
         }
-        &_image {
-            max-width: 55%;
-            opacity: 1;
-        }
     }
-
     @include screen('min-width: 1400px'){
         &_box.-content {
             width: 50%;
         }
-        &_image {
-            right: 12%;
-            max-width: 65%;
+        &_decoration {
+            right: 13%;
+            width: 50%;
         }
     }
 }
