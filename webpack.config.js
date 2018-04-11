@@ -39,7 +39,7 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     // minify css at the end
-                    use: [{loader: 'css-loader', options: {minimize: false}}, 'postcss-loader']
+                    use: [{loader: 'css-loader', options: {minimize: true}}, 'postcss-loader']
 
                 })
             },
@@ -48,7 +48,7 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     // minify css at the end
-                    use: [{loader: 'css-loader', options: {minimize: false}}, 'postcss-loader', 'sass-loader']
+                    use: [{loader: 'css-loader', options: {minimize: true}}, 'postcss-loader', 'sass-loader']
                 })
             },
             {
@@ -67,9 +67,9 @@ module.exports = {
     },
 
     plugins: [
-        // new UglifyJsPlugin({
-        //     sourceMap: true
-        // }),
+        new UglifyJsPlugin({
+            sourceMap: true
+        }),
         new ExtractTextPlugin({
             filename: '../css/style.css'
         })

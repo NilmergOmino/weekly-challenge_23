@@ -47,6 +47,12 @@
       "css": "deviantart",
       "code": 61885,
       "src": "fontawesome"
+    },
+    {
+      "uid": "0b2b66e526028a6972d51a6f10281b4b",
+      "css": "zoom-in",
+      "code": 59392,
+      "src": "fontawesome"
     }
   ]
 }

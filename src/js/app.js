@@ -1,5 +1,10 @@
 import '../scss/style.scss';
 let $ = require('jquery');
+window.jQuery = $;
+require('simplelightbox/dist/simplelightbox.css');
+require('simplelightbox/dist/simple-lightbox.js');
+
+let lightbox = $('._js-gallery ._js-imageLink').simpleLightbox();
 
 $(document).on('scroll', function(){
     let scrollTop = $(document).scrollTop();

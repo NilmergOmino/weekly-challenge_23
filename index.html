@@ -85,13 +85,31 @@
                 <h2 class="minorHeader_heading _text-fancy">Profile</h2>
                 <p class="minorHeader_subHeading">I Make Beautiful Thinks</p>
             </header>
-            <div class="profile_gallery gallery">
-                <div class="gallery_box -n1"><img src="dist/assets/img/gallery-img-1.png" alt="gift card" class="gallery_image -n1"></div>
-                <div class="gallery_box -n2"><img src="dist/assets/img/gallery-img-2.png" alt="magazine" class="gallery_image -n2"></div>
-                <div class="gallery_box -n3"><img src="dist/assets/img/gallery-img-3.png" alt="business cards" class="gallery_image -n3"></div>
-                <div class="gallery_box -n4"><img src="dist/assets/img/gallery-img-4.png" alt="brochure" class="gallery_image -n4"></div>
-                <div class="gallery_box -n5"><img src="dist/assets/img/gallery-img-5.png" alt="brochure" class="gallery_image -n5"></div>
-                <div class="gallery_box -n6"><img src="dist/assets/img/gallery-img-6.png" alt="tablet" class="gallery_image -n6"></div>
+            <div class="profile_gallery gallery _js-gallery">
+                <a class="gallery_box -n1 _effect-darken _js-imageLink" href="dist/assets/img/gallery-img-1.png">
+                    <span class="gallery_icon icon-zoom-in" aria-label="zoom in"></span>
+                    <img src="dist/assets/img/gallery-img-1.png" alt="gift card" class="gallery_image -n1">
+                </a>
+                <a class="gallery_box -n2 _effect-darken _js-imageLink" href="dist/assets/img/gallery-img-2.png">
+                    <span class="gallery_icon icon-zoom-in" aria-label="zoom in"></span>
+                    <img src="dist/assets/img/gallery-img-2.png" alt="magazine" class="gallery_image -n2">
+                </a>
+                <a class="gallery_box -n3 _effect-darken _js-imageLink" href="dist/assets/img/gallery-img-3.png">
+                    <span class="gallery_icon icon-zoom-in" aria-label="zoom in"></span>
+                    <img src="dist/assets/img/gallery-img-3.png" alt="business cards" class="gallery_image -n3">
+                </a>
+                <a class="gallery_box -n4 _effect-darken _js-imageLink" href="dist/assets/img/gallery-img-4.png">
+                    <span class="gallery_icon icon-zoom-in" aria-label="zoom in"></span>
+                    <img src="dist/assets/img/gallery-img-4.png" alt="brochure" class="gallery_image -n4">
+                </a>
+                <a class="gallery_box -n5 _effect-darken _js-imageLink" href="dist/assets/img/gallery-img-5.png">
+                    <span class="gallery_icon icon-zoom-in" aria-label="zoom in"></span>
+                    <img src="dist/assets/img/gallery-img-5.png" alt="brochure" class="gallery_image -n5">
+                </a>
+                <a class="gallery_box -n6 _effect-darken _js-imageLink" href="dist/assets/img/gallery-img-6.png">
+                    <span class="gallery_icon icon-zoom-in" aria-label="zoom in"></span>
+                    <img src="dist/assets/img/gallery-img-6.png" alt="tablet" class="gallery_image -n6">
+                </a>
             </div>
         </article>
         <article class="main_client client _box-main _effect-darken" id="client">
@@ -101,10 +119,10 @@
             </header>
             <p class="client_paragraph _paragraph _text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="client_box -container">
-                <img src="dist/assets/img/client-1.png" alt="" class="client_image -first">
-                <img src="dist/assets/img/client-2.png" alt="" class="client_image">
-                <img src="dist/assets/img/client-3.png" alt="" class="client_image">
-                <img src="dist/assets/img/client-4.png" alt="" class="client_image -last">
+                <img src="dist/assets/img/client-1.png" alt="Unicorns" class="client_image -first">
+                <img src="dist/assets/img/client-2.png" alt="Deep Blue Altantis" class="client_image">
+                <img src="dist/assets/img/client-3.png" alt="The Great Falls Colorado" class="client_image">
+                <img src="dist/assets/img/client-4.png" alt="Norsemen" class="client_image -last">
             </div>
         </article>
         <article class="main_blog blog _box-main" id="blog">
@@ -182,19 +200,19 @@
             <form class="contactForm_form">
                 <div class="contactForm_box -pair">
                     <label for="form-name" class="contactForm_label">Name</label>
-                    <input id="form-name" type="text" class="contactForm_input" name="name">
+                    <input id="form-name" type="text" class="contactForm_input" name="name" required>
                 </div>
                 <div class="contactForm_box -pair">
                     <label for="form-email" class="contactForm_label">Email</label>
-                    <input id="form-email" type="email" class="contactForm_input" name="email">
+                    <input id="form-email" type="email" class="contactForm_input" name="email" required>
                 </div>
                 <div class="contactForm_box -pair">
                     <label for="form-phone" class="contactForm_label">Phone</label>
-                    <input id="form-phone" type="text" class="contactForm_input" name="phone">
+                    <input id="form-phone" type="text" class="contactForm_input" name="phone" required>
                 </div>
                 <div class="contactForm_box -pair">
                     <label for="form-message" class="contactForm_label -message">Message</label>
-                    <textarea name="message" id="form-message" cols="30" rows="10" class="contactForm_input -textarea"></textarea>
+                    <textarea name="message" id="form-message" cols="30" rows="10" class="contactForm_input -textarea" required></textarea>
                 </div>
                 <input type="submit" class="contactForm_submit _button _button-primary" value="Submit">
             </form>

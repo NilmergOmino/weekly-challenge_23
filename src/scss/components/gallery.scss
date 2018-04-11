@@ -44,6 +44,19 @@
             grid-row-end: 11;
         }
     }
+    &_box:before {
+        background-color: rgba($colorAzureRadiance, 0.7);
+        opacity: 0;
+        transition: $timeFast;
+    }
+    &_box:hover:before,
+    &_box:focus:before {
+        opacity: 1;
+    }
+    &_box:hover &_icon,
+    &_box:focus &_icon {
+        opacity: 1;
+    }
     &_image {
         height: 100%;
         width: auto;
@@ -52,6 +65,19 @@
             width: 100%;
             height: auto;
         }
+    }
+    &_icon {
+        font-size: 3em;
+        color: white;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - .5em);
+        left: calc(50% - .5em);
+        opacity: 0;
+        transition: $timeFast;
+    }
+    &_icon:hover {
+        transform: scale(1.2);
     }
 
     @include screen(desktop) {
